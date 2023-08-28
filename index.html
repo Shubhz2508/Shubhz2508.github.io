@@ -294,15 +294,23 @@ li img {
 .nav-list li {
     margin: 0 15px;
 }
-.project-info p {
-    color: black; /* Set the desired color for the <p> element */
-}
+
 
 .project-description p {
     color: black;
 }
 ul.no-bullets {
     list-style-type: none; /* Remove bullet points */
+}
+.section-box {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -359,42 +367,50 @@ ul.no-bullets {
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <section id="experience" style="background-color: white; padding-top: 50px;" >
+        <section id="experience" style="background-color: white; padding-top: 50px; margin-bottom: 30px" >
             <h2 class="animate__animated animate__fadeIn">Projects</h2>
             <div class="project animate__animated animate__fadeIn">
                 <div class="project-header">
-                    <img src="https://1000logos.net/wp-content/uploads/2016/11/cisco-emblem.jpg" alt="Cisco Logo" class="logo">
-                    <div class="project-info">
+                    <img src="https://1000logos.net/wp-content/uploads/2016/11/cisco-emblem.jpg" alt="Cisco Logo" class="logo" style="margin-bottom: 20px;">
+                    <div class="project-info" style="background-color: rgb(0, 195, 255); color: white;">
                         <h3>WEBUI - Enhancing User Interface for Switches and Routers</h3>
-                        <p>Cisco · Apprenticeship</p>
-                        <p>Dec 2022 - Present · 9 mos · Bengaluru, Karnataka, India</p>
+                        <h5>Cisco · Apprenticeship</h5>
+                        <h5>Dec 2022 - Present · 9 mos · Bengaluru, Karnataka, India</h5>
                     </div>
+                    
                 </div>
                 <div class="project-description">
                     <p>As a pivotal member of the "WEBUI" project team at Cisco's IOT Department, I contribute significantly to the successful execution and enhancement of user interfaces for switches and routers. My role encompasses diverse responsibilities across bug resolution, feature development, and Angular migration.</p>
-                    <h4>Bug Resolving:</h4>
-                    <ul class="no-bullets">
-                        <li>Diligently identify and diagnose software bugs, employing analytical prowess to pinpoint optimal solutions.</li>
-                        <li>Employ Git version control to manage and track code changes seamlessly.</li>
-                    </ul>
-                    <h4>Adding New Features & Feature Development</h4>
-                    <ul class="no-bullets">
-                        <li>Spearhead the development of an optimal user interface for the project's website, leveraging the Angular framework.</li>
-                        <li>Collaborate on the creation of backend functionality for new features, utilizing Node.js and Lua scripting.</li>
-                    </ul>
-    
-                    <h4>Angular Migration</h4>
-                    <ul class="no-bullets">
-                        <li>Undertake a critical role in code analysis and the migration process from Angular.js to Angular 14.</li>
-                        <li>Leverage an expert understanding of TypeScript and JavaScript to ensure a seamless transition.</li>
-                    </ul>
-    
-                    <h4>Skills Involved</h4>
-                    <ul class="no-bullets">
-                        <li><strong>Bug Resolving:</strong> Testing, Debugging, Problem Solving, Git</li>
-                        <li><strong>Adding New Features & Feature Development:</strong> Angular, Node.js, Lua Scripting, Networking, IOT Operations</li>
-                        <li><strong>Angular Migration:</strong> TypeScript, JavaScript</li>
-                    </ul>
+                    <div class="section-box">
+                        <h4>Bug Resolving:</h4>
+                        <ul class="no-bullets">
+                            <li>Diligently identify and diagnose software bugs, employing analytical prowess to pinpoint optimal solutions.</li>
+                            <li>Employ Git version control to manage and track code changes seamlessly.</li>
+                        </ul>
+                    </div>
+                    <div class="section-box">
+                        <h4>Adding New Features & Feature Development</h4>
+                        <ul class="no-bullets">
+                            <li>Spearhead the development of an optimal user interface for the project's website, leveraging the Angular framework.</li>
+                            <li>Collaborate on the creation of backend functionality for new features, utilizing Node.js and Lua scripting.</li>
+                        </ul>
+                    </div>
+                    <div class="section-box">
+                        <h4>Angular Migration</h4>
+                        <ul class="no-bullets">
+                            <li>Undertake a critical role in code analysis and the migration process from Angular.js to Angular 14.</li>
+                            <li>Leverage an expert understanding of TypeScript and JavaScript to ensure a seamless transition.</li>
+                        </ul>
+                    </div>
+                    <div class="section-box">
+                        <h4>Skills Involved</h4>
+                        <ul class="no-bullets">
+                            <li><strong>Bug Resolving:</strong> Testing, Debugging, Problem Solving, Git</li>
+                            <li><strong>Adding New Features & Feature Development:</strong> Angular, Node.js, Lua Scripting, Networking, IOT Operations</li>
+                            <li><strong>Angular Migration:</strong> TypeScript, JavaScript</li>
+                        </ul>
+                    </div>
+                    
     
                     <p>Through meticulous bug resolution, impactful feature additions, and the successful migration of Angular versions, I consistently contribute to the project's success.</p>
                 </div>
@@ -402,8 +418,8 @@ ul.no-bullets {
         </section>
         
     
-    <section id="skills">
-        <div class="container">
+        <section id="skills" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 30px;">
+            <div class="container">
             <div class="row">
                 <div class="col-md-6 offset-md-3 mt-5 text-center animate__animated animate__fadeIn">
                     <h1>My Skills</h1>
@@ -523,7 +539,7 @@ ul.no-bullets {
                 <tr>
                     <td>Government Polytechnic Pune</td>
                     <td>Diploma in Mechanical Engineering</td>
-                    <td>83 Percentage</td>
+                    <td>83 Percent</td>
                     <td>2019</td>
                 </tr>
                 <tr>
@@ -536,11 +552,8 @@ ul.no-bullets {
         </table>                      
           <h2>Certifications</h2>
         <table class="table table-bordered">
-           
-            <tbody>
-              
-                <tr>
-                    
+            <tbody>        
+                <tr>             
                     <td>
                         <ul>
                             <li>
@@ -587,8 +600,6 @@ ul.no-bullets {
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LxTQB9jxeyarL2-m9-csCIjMe_aMZTT6ABdxT8XYyQ&ss" alt="Institute 2 Logo"> Software Development and Testing by Qspider's
                             </li>
                         </ul>
-                            
-                        
                     </td>
                 </tr>
             </tbody>
