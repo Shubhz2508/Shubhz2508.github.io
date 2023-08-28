@@ -30,17 +30,7 @@
             background-color: #ccc;
             padding: 10px 0;
         }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        li {
-            margin: 0 15px;
-        }
+     
         a {
             color: #000000;
             text-decoration: none;
@@ -63,10 +53,10 @@
                 background-color: rgb(4, 59, 74); /* Change to yellow at 25% */
             }
             50% {
-                background-color: rgb(4, 74, 37); /* Change to green at 50% */
+                background-color: rgb(7, 41, 40); /* Change to green at 50% */
             }
             75% {
-                background-color: #0a3805; /* Change to dark green at 75% */
+                background-color: #0b2908; /* Change to dark green at 75% */
             }
             100% {
                 background-color: #343a40; /* End with dark gray background */
@@ -74,8 +64,8 @@
         }
         /* Apply the animation to the specified class */
         .color-change-animation {
-            animation: backgroundChange 10s infinite; /* Loop the animation */
-            background-color: #007bff; /* Set initial background color to blue */
+            animation: backgroundChange 4s; /* Loop the animation */
+            
         }
         body {
             background-color: #f5f5f5;
@@ -208,6 +198,114 @@ li img {
   max-width: 50px; /* Adjust the image width as needed */
   margin-right: 10px; /* Add spacing between image and text */
 }
+.skill {
+            margin: 20px;
+        }
+        .skill-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .progress {
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            transition: width 1s;
+        }
+        .project-list {
+    list-style-type: disc; /* Use bullet points */
+    margin-left: 10px; /* Add left margin for indentation */
+    padding-left: 0; /* Remove default padding */
+}
+
+        .project {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .project-info h3 {
+            margin: 0;
+        }
+        
+        #contact {
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-item {
+    background-color: white;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.contact-item a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #0056b3;
+}
+.project-subtitle {
+    color: black; /* Set color to black */
+    font-weight: bold; /* Add bold font weight if desired */
+    display: block; /* Ensure each line is on a new line */
+}
+
+.project-duration {
+    color: black; /* Set color to black */
+    display: block; /* Ensure each line is on a new line */
+}
+.skill p {
+    color: black; /* Set the desired text color for <p> within .skill */
+}
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+.project-info p {
+    color: black; /* Set the desired color for the <p> element */
+}
+
+.project-description p {
+    color: black;
+}
+ul.no-bullets {
+    list-style-type: none; /* Remove bullet points */
+}
+
+
     </style>
     <title>Shubham Ekkaldevi</title>
 </head>
@@ -217,7 +315,7 @@ li img {
         <p>Software Developer | Front-End Specialist</p>
     </header>
     <nav class="animate__animated animate__slideInLeft">
-        <ul>
+        <ul class="nav-list"> <!-- Add the custom class "nav-list" -->
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -226,6 +324,7 @@ li img {
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    
     <section id="home" class="container">
         <div class="row">
             <div class="col-md-6 profile-pic" style="margin-bottom: 5px;">
@@ -242,13 +341,9 @@ li img {
                 <p class="lead">Transitioning from Mechanical Engineering to the dynamic world of Software Development, I embarked on my journey as a Software Developer at Cisco Systems. As a fresh entrant to the field, I have eagerly embraced the challenges and opportunities that come with reshaping my career path. Equipped with a strong foundation in software engineering, I have fortified my knowledge through comprehensive courses from esteemed institutions, including QSpiders Institute for Software Development and NIIT Pune. My unwavering determination and commitment to continuous learning drive me to explore, innovate, and thrive in the ever-evolving landscape of software engineering.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <a routerLink="/about" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px;">Learn More</a>
-            </div>
-        </div>
+       
 
-        <section id="about" class="container">
+        <section id="about" class="container" style="padding-bottom: 40px; padding-top: 40px;">
             <div class="row">
                 <div class="col-md-12 about-container animate__animated animate__fadeIn">
                     <div class="about-left">
@@ -263,11 +358,137 @@ li img {
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <section id="experience">
-        <!-- Your experience content here -->
-    </section>
+
+        <section id="experience" style="background-color: white; padding-top: 50px;" >
+            <h2 class="animate__animated animate__fadeIn">Projects</h2>
+            <div class="project animate__animated animate__fadeIn">
+                <div class="project-header">
+                    <img src="https://1000logos.net/wp-content/uploads/2016/11/cisco-emblem.jpg" alt="Cisco Logo" class="logo">
+                    <div class="project-info">
+                        <h3>WEBUI - Enhancing User Interface for Switches and Routers</h3>
+                        <p>Cisco · Apprenticeship</p>
+                        <p>Dec 2022 - Present · 9 mos · Bengaluru, Karnataka, India</p>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <p>As a pivotal member of the "WEBUI" project team at Cisco's IOT Department, I contribute significantly to the successful execution and enhancement of user interfaces for switches and routers. My role encompasses diverse responsibilities across bug resolution, feature development, and Angular migration.</p>
+                    <h4>Bug Resolving:</h4>
+                    <ul class="no-bullets">
+                        <li>Diligently identify and diagnose software bugs, employing analytical prowess to pinpoint optimal solutions.</li>
+                        <li>Employ Git version control to manage and track code changes seamlessly.</li>
+                    </ul>
+                    <h4>Adding New Features & Feature Development</h4>
+                    <ul class="no-bullets">
+                        <li>Spearhead the development of an optimal user interface for the project's website, leveraging the Angular framework.</li>
+                        <li>Collaborate on the creation of backend functionality for new features, utilizing Node.js and Lua scripting.</li>
+                    </ul>
+    
+                    <h4>Angular Migration</h4>
+                    <ul class="no-bullets">
+                        <li>Undertake a critical role in code analysis and the migration process from Angular.js to Angular 14.</li>
+                        <li>Leverage an expert understanding of TypeScript and JavaScript to ensure a seamless transition.</li>
+                    </ul>
+    
+                    <h4>Skills Involved</h4>
+                    <ul class="no-bullets">
+                        <li><strong>Bug Resolving:</strong> Testing, Debugging, Problem Solving, Git</li>
+                        <li><strong>Adding New Features & Feature Development:</strong> Angular, Node.js, Lua Scripting, Networking, IOT Operations</li>
+                        <li><strong>Angular Migration:</strong> TypeScript, JavaScript</li>
+                    </ul>
+    
+                    <p>Through meticulous bug resolution, impactful feature additions, and the successful migration of Angular versions, I consistently contribute to the project's success.</p>
+                </div>
+            </div>  
+        </section>
+        
+    
     <section id="skills">
-        <!-- Your skills content here -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 mt-5 text-center animate__animated animate__fadeIn">
+                    <h1>My Skills</h1>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-primary skill-button" data-skill="frontEnd">Front-end</button>
+                        <button class="btn btn-primary skill-button" data-skill="backEnd">Back-end</button>
+                        <button class="btn btn-primary skill-button" data-skill="database">Database</button>
+                        <button class="btn btn-primary skill-button" data-skill="tools">Tools</button>
+                        <button class="btn btn-primary skill-button" data-skill="softSkills">Soft Skills</button>
+                        <button class="btn btn-primary skill-button" data-skill="technicalSkills">Technical Skills</button>
+                    </div>
+                    <div class="skill" id="frontEnd">
+                        <h2 class="skill-title">Front-end Skills</h2>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 90%;">HTML (90%)</div>
+                        </div>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 90%;">CSS (90%)</div>
+                        </div>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 75%;">JavaScript (75%)</div>
+                        </div>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 90%;">TypeScript (90%)</div>
+                        </div>
+                    </div>
+                    <div class="skill" id="backEnd">
+                        <h2 class="skill-title">Back-end Skills</h2>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 90%;">Java (90%)</div>
+                        </div>
+                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
+                            <div class="progress-bar" style="width: 70%;">Node.js (70%)</div>
+                        </div>
+                    </div>
+                    <div class="skill" id="database">
+                        <h2 class="skill-title">Database Skills</h2>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;">SQL (85%)</div>
+                        </div>
+                    </div>
+                    <div class="skill" id="tools">
+                        <h2 class="skill-title">Tools Skills</h2>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%;">Angular (90%)</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%;">Git (85%)</div>
+                        </div>
+                    </div>
+                    <div class="skill" id="softSkills">
+                        <h2 class="skill-title">Soft Skills</h2>
+                        <p>Communication, Problem-solving, Teamwork, Continuous learning, Adaptability</p>
+                    </div>
+                    <div class="skill" id="technicalSkills">
+                        <h2 class="skill-title">Technical Skills</h2>
+                        <p>Debugging, Testing, API, Networking, IoT, OOP, JSON, Linux</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            // Handle skill button clicks
+            const skillButtons = document.querySelectorAll('.skill-button');
+            skillButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const skillId = button.getAttribute('data-skill');
+                    const skillSection = document.getElementById(skillId);
+                    skillButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    skillButtons.forEach(btn => btn.disabled = false);
+                    button.disabled = true;
+                    hideAllSkillSections();
+                    skillSection.style.display = 'block';
+                });
+            });
+    
+            function hideAllSkillSections() {
+                const skillSections = document.querySelectorAll('.skill');
+                skillSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+            }
+        </script>
     </section>
     <section id="education" class="animate__animated animate__fadeIn">
         <h2>Qualification and Courses</h2>
@@ -374,8 +595,23 @@ li img {
         </table>
     </section>
     <section id="contact">
-        <!-- Your contact content here -->
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Mobile</h3>
+                <p>+91 9156802283</p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>shubhamind722@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/" target="_blank">Profile</a></p>
+            </div>
+        </div>
     </section>
+    
     <footer>
         <p>&copy; 2023 Shubham Ekkaldevi</p>
     </footer>
