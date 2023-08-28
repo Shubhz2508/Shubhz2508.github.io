@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #343a40; /* Updated background color */
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #343a40;
+            color: #fff;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #ccc;
+        }
+        nav {
+            background-color: #ccc;
+            padding: 10px 0;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            margin: 0 15px;
+        }
+        a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #ffffff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #343a40;
+            color: #fff;
+        }
+        @keyframes backgroundChange {
+            0% {
+                background-color: #007bff; /* Start with blue background */
+            }
+            25% {
+                background-color: rgb(4, 59, 74); /* Change to yellow at 25% */
+            }
+            50% {
+                background-color: rgb(4, 74, 37); /* Change to green at 50% */
+            }
+            75% {
+                background-color: #0a3805; /* Change to dark green at 75% */
+            }
+            100% {
+                background-color: #343a40; /* End with dark gray background */
+            }
+        }
+        /* Apply the animation to the specified class */
+        .color-change-animation {
+            animation: backgroundChange 10s infinite; /* Loop the animation */
+            background-color: #007bff; /* Set initial background color to blue */
+        }
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        #home {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+        }
+        .introduction {
+            background-color: #343a40;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .introduction h2  {
+            color: white; /* Set heading color to white */
+        }
+        .introduction p {
+            color: white; /* Set heading color to white */
+        }
+        .profile-summary {
+            background-color: #343a40;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .profile-summary h2 {
+            color: white;
+        }
+        .profile-summary p {
+            color: white;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Shubham Ekkaldevi</title>
+</head>
+<body>
+    <header class="animate__animated animate__fadeIn color-change-animation">
+        <h1>Shubham Ekkaldevi</h1>
+        <p>Software Developer | Front-End Specialist</p>
+    </header>
+    <nav class="animate__animated animate__slideInLeft">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="container">
+        <div class="row">
+            <div class="col-md-6 profile-pic" style="margin-bottom: 5px;">
+                <img src="https://scontent.fblr22-1.fna.fbcdn.net/v/t39.30808-6/330905301_1296720567553562_3274463207546428106_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=O7nPSrfLRbIAX9Vp5WL&_nc_ht=scontent.fblr22-1.fna&oh=00_AfB5e3yw-vtDQS2AUzcXznw3Xo8sN4MKR1ZzWBDqOMlTCg&oe=64EF5855" alt="Shubham Ekkaldevi" style="width: 40%; height: 80%;">
+            </div>
+            <div class="col-md-6 introduction animate__animated animate__slideInLeft" style="height: 300px;">
+                <h2>Hello, I'm Shubham Ekkaldevi</h2>
+                <p class="lead">Passionate Software Developer specializing in front-end development in the Internet of Things (IoT) domain at Cisco. I'm dedicated to crafting seamless digital experiences that bridge technology and user-centric design.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 profile-summary">
+                <h2>Profile Summary</h2>
+                <p class="lead">Transitioning from Mechanical Engineering to the dynamic world of Software Development, I embarked on my journey as a Software Developer at Cisco Systems. As a fresh entrant to the field, I have eagerly embraced the challenges and opportunities that come with reshaping my career path. Equipped with a strong foundation in software engineering, I have fortified my knowledge through comprehensive courses from esteemed institutions, including QSpiders Institute for Software Development and NIIT Pune. My unwavering determination and commitment to continuous learning drive me to explore, innovate, and thrive in the ever-evolving landscape of software engineering.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a routerLink="/about" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    <section id="about">
+        <!-- Your about content here -->
+    </section>
+    <section id="experience">
+        <!-- Your experience content here -->
+    </section>
+    <section id="skills">
+        <!-- Your skills content here -->
+    </section>
+    <section id="education">
+        <!-- Your education content here -->
+    </section>
+    <section id="contact">
+        <!-- Your contact content here -->
+    </section>
+    <footer>
+        <p>&copy; 2023 Shubham Ekkaldevi</p>
+    </footer>
+</body>
+</html>
