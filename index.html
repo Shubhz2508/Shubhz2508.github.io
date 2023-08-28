@@ -130,6 +130,84 @@
         .btn-primary:hover {
             background-color: #0056b3;
         }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+        #about-me {
+            padding: 50px 0;
+        }
+        .about-container {
+            display: flex;
+        }
+        .about-left {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            margin-right: 20px;
+        }
+        .about-left h2 {
+            color: #333333;
+        }
+        .about-left p {
+            color: #666666;
+        }
+        .selected-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+        #education {
+            padding: 50px 0;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #343a40;
+            color: white;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .line-after li:not(:last-child)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+
+.logo-cell {
+  text-align: center;
+}
+
+.logo-cell img {
+  max-width: 100px; /* Adjust the image width as needed */
+}
+
+li img {
+  max-width: 50px; /* Adjust the image width as needed */
+  margin-right: 10px; /* Add spacing between image and text */
+}
     </style>
     <title>Shubham Ekkaldevi</title>
 </head>
@@ -166,20 +244,134 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <a routerLink="/about" class="btn btn-primary">Learn More</a>
+                <a routerLink="/about" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px;">Learn More</a>
             </div>
         </div>
-    <section id="about">
-        <!-- Your about content here -->
-    </section>
+
+        <section id="about" class="container">
+            <div class="row">
+                <div class="col-md-12 about-container animate__animated animate__fadeIn">
+                    <div class="about-left">
+                        <h2>About Me</h2>
+                        I transitioned from Mechanical Engineering to Software Development, embarking on a transformative journey. At Cisco Systems India, I combine technical prowess with creative spark, thriving on solving intricate problems and creating elegant solutions. With attention to detail and curiosity, I bridge technology and user-centric design. My focus is on Front-End technologies—Angular, JavaScript, and TypeScript—to create captivating interfaces."
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <section id="experience">
         <!-- Your experience content here -->
     </section>
     <section id="skills">
         <!-- Your skills content here -->
     </section>
-    <section id="education">
-        <!-- Your education content here -->
+    <section id="education" class="animate__animated animate__fadeIn">
+        <h2>Qualification and Courses</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Institute</th>
+                    <th>Course</th>
+                    <th>Score</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pune University</td>
+                    <td>B.E Mechanical Engineering</td>
+                    <td>9.3 CGPA</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>Qspider's Institute</td>
+                    <td>Software Development and Testing</td>
+                    <td></td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>NIIT Pune</td>
+                    <td>Advanced Diploma in Web Development</td>
+                    <td></td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Government Polytechnic Pune</td>
+                    <td>Diploma in Mechanical Engineering</td>
+                    <td>83 Percentage</td>
+                    <td>2019</td>
+                </tr>
+                <tr>
+                    <td>Vidya Niketan</td>
+                    <td>Secondary</td>
+                    <td>93 percent</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>                      
+          <h2>Certifications</h2>
+        <table class="table table-bordered">
+           
+            <tbody>
+              
+                <tr>
+                    
+                    <td>
+                        <ul>
+                            <li>
+                                <img src="data:image/png;base64,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" alt="Institute 1 Logo"> CCNA Certification Cisco Certified Networking Associate
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Complete Java Full Stack Development (Simplilearn)
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Python Programming (Simplilearn)
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Become a back-end expert (Simplilearn)
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Implement Frameworks the DevOps way (SIMPLILEARN)
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Developing Web Application using Front-end stack
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPll5gTEFFAFz-mu15Yai6ZwNVSdgn8lOmL6ErEtbdw&s" alt="Institute 2 Logo"> NIIT Foundation Course for Web Development
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Implement OOPS using Java with D.S (SIMPLILEARN)
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LxTQB9jxeyarL2-m9-csCIjMe_aMZTT6ABdxT8XYyQ&ss" alt="Institute 2 Logo"> Software Development and Testing by Qspider's
+                            </li>
+                        </ul>
+                            
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <section id="contact">
         <!-- Your contact content here -->
