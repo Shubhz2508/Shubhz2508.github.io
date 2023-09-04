@@ -551,8 +551,97 @@ footer .text span a:hover{
 .progress-bar {
   transition: width 1s;
 }
+
 .project-list {
-list-style-type: disc; /* Use bullet points */
-margin-left: 10px; /* Add left margin for indentation */
-padding-left: 0; /* Remove default padding */
+  list-style-type: disc; /* Use bullet points */
+  margin-left: 10px; /* Add left margin for indentation */
+  padding-left: 0; /* Remove default padding */
+}
+
+      .project {
+          background-color: rgba(255, 255, 255, 0.9);
+          margin: 20px;
+          padding: 20px;
+          border-radius: 10px;
+      }
+      .logo {
+          max-width: 100px;
+          margin-right: 20px;
+      }
+      .project-info h3 {
+          margin: 0;
+      }
+
+      #education {
+        padding: 50px 0;
+        text-align: center;
+    }
+    table {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #6cb0f4;
+    }
+    h2 {
+        margin-top: 20px;
+    }
+    .line-after li:not(:last-child)::after {
+content: "";
+display: block;
+border-bottom: 1px solid black;
+margin-top: 10px;
+}
+
+.logo-cell {
+text-align: center;
+}
+
+.logo-cell img {
+max-width: 100px; /* Adjust the image width as needed */
+}
+
+li img {
+max-width: 50px; /* Adjust the image width as needed */
+margin-right: 10px; /* Add spacing between image and text */
+}
+.project-list {
+  list-style-type: disc; /* Use bullet points */
+  margin-left: 10px; /* Add left margin for indentation */
+  padding-left: 0; /* Remove default padding */
+}
+
+      .project {
+          background-color: rgba(255, 255, 255, 0.9);
+          margin: 20px;
+          padding: 20px;
+          border-radius: 10px;
+      }
+      .logo {
+          max-width: 100px;
+          margin-right: 20px;
+      }
+      .project-info h3 {
+          margin: 0;
+      }
+      .project-subtitle {
+    color: black; /* Set color to black */
+    font-weight: bold; /* Add bold font weight if desired */
+    display: block; /* Ensure each line is on a new line */
+}
+
+.project-duration {
+    color: black; /* Set color to black */
+    display: block; /* Ensure each line is on a new line */
+}
+.project-description p {
+    color: black;
 }
