@@ -1,630 +1,415 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        /* Custom styles */
-        body {
-            background-color: #343a40; /* Updated background color */
-            font-family: Arial, sans-serif;
-        }
-        header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: #343a40;
-            color: #fff;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        p {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #ccc;
-        }
-        nav {
-            background-color: #ccc;
-            padding: 10px 0;
-        }
-     
-        a {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        a:hover {
-            color: #ffffff;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #343a40;
-            color: #fff;
-        }
-        @keyframes backgroundChange {
-            0% {
-                background-color: #007bff; /* Start with blue background */
-            }
-            25% {
-                background-color: rgb(4, 59, 74); /* Change to yellow at 25% */
-            }
-            50% {
-                background-color: rgb(7, 41, 40); /* Change to green at 50% */
-            }
-            75% {
-                background-color: #0b2908; /* Change to dark green at 75% */
-            }
-            100% {
-                background-color: #343a40; /* End with dark gray background */
-            }
-        }
-        /* Apply the animation to the specified class */
-        .color-change-animation {
-            animation: backgroundChange 4s; /* Loop the animation */
-            
-        }
-        body {
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-        }
-        #home {
-            padding: 50px 0;
-            text-align: center;
-        }
-        .profile-pic img {
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            max-width: 100%;
-        }
-        .introduction {
-            background-color: #343a40;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-        }
-        .introduction h2  {
-            color: white; /* Set heading color to white */
-        }
-        .introduction p {
-            color: white; /* Set heading color to white */
-        }
-        .profile-summary {
-            background-color: #343a40;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-        }
-        .profile-summary h2 {
-            color: white;
-        }
-        .profile-summary p {
-            color: white;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .navbar {
-            background-color: #007bff;
-        }
-        .navbar-dark .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-        .navbar-dark .navbar-toggler-icon {
-            background-color: #ffffff;
-        }
-        #about-me {
-            padding: 50px 0;
-        }
-        .about-container {
-            display: flex;
-        }
-        .about-left {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            flex: 1;
-            margin-right: 20px;
-        }
-        .about-left h2 {
-            color: #333333;
-        }
-        .about-left p {
-            color: #666666;
-        }
-        .selected-section {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            flex: 1;
-        }
-        #education {
-            padding: 50px 0;
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #343a40;
-            color: white;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        .line-after li:not(:last-child)::after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid black;
-  margin-top: 10px;
-}
 
-.logo-cell {
-  text-align: center;
-}
-
-.logo-cell img {
-  max-width: 100px; /* Adjust the image width as needed */
-}
-
-li img {
-  max-width: 50px; /* Adjust the image width as needed */
-  margin-right: 10px; /* Add spacing between image and text */
-}
-.skill {
-            margin: 20px;
-        }
-        .skill-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .progress {
-            height: 30px;
-            margin-bottom: 10px;
-        }
-        .progress-bar {
-            transition: width 1s;
-        }
-        .project-list {
-    list-style-type: disc; /* Use bullet points */
-    margin-left: 10px; /* Add left margin for indentation */
-    padding-left: 0; /* Remove default padding */
-}
-
-        .project {
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .logo {
-            max-width: 100px;
-            margin-right: 20px;
-        }
-        .project-info h3 {
-            margin: 0;
-        }
-        
-        #contact {
-    padding: 50px;
-    background-color: #f5f5f5;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-item {
-    background-color: white;
-    padding: 20px;
-    width: calc(33.33% - 20px);
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contact-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.contact-item p {
-    font-size: 1.2rem;
-    margin: 5px 0;
-}
-
-.contact-item a {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-item a:hover {
-    color: #0056b3;
-}
-.project-subtitle {
-    color: black; /* Set color to black */
-    font-weight: bold; /* Add bold font weight if desired */
-    display: block; /* Ensure each line is on a new line */
-}
-
-.project-duration {
-    color: black; /* Set color to black */
-    display: block; /* Ensure each line is on a new line */
-}
-.skill p {
-    color: black; /* Set the desired text color for <p> within .skill */
-}
-.nav-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-
-.project-description p {
-    color: black;
-}
-ul.no-bullets {
-    list-style-type: none; /* Remove bullet points */
-}
-.section-box {
-    background-color: #343a40;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    max-width: 770px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-    </style>
-    <title>Shubham Ekkaldevi</title>
-</head>
-<body>
-    <header class="animate__animated animate__fadeIn color-change-animation">
-        <h1>Shubham Ekkaldevi</h1>
-        <p>Software Developer | Front-End Specialist</p>
-    </header>
-    <nav class="animate__animated animate__slideInLeft">
-        <ul class="nav-list"> <!-- Add the custom class "nav-list" -->
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Move to up button -->
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- navgaition menu -->
+    <nav>
+      <div class="navbar">
+        <div class="logo"><a href="#">Portfolio.</a></div>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
         </ul>
+        <div class="media-icons">
+          <a href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
-    
-    <section id="home" class="container">
-        <div class="row">
-            <div class="col-md-6 profile-pic" style="margin-bottom: 20px; margin-top: 10px">
-                <img src="Shubhi.jpg" alt="Shubham Ekkaldevi" style="width: 50%; height: 90%; border-radius: 0; border: 2px solid black;">
-            </div>
-            <div class="col-md-6 introduction animate__animated animate__slideInLeft" style="height: 300px;">
-                <h2>Hello, I'm Shubham Ekkaldevi</h2>
-                <p class="lead">Passionate Software Developer specializing in front-end development in the Internet of Things (IoT) domain at Cisco. I'm dedicated to crafting seamless digital experiences that bridge technology and user-centric design.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 profile-summary">
-                <h2>Profile Summary</h2>
-                <p class="lead">Transitioning from Mechanical Engineering to the dynamic world of Software Development, I embarked on my journey as a Software Developer at Cisco Systems. As a fresh entrant to the field, I have eagerly embraced the challenges and opportunities that come with reshaping my career path. Equipped with a strong foundation in software engineering, I have fortified my knowledge through comprehensive courses from esteemed institutions, including QSpiders Institute for Software Development and NIIT Pune. My unwavering determination and commitment to continuous learning drive me to explore, innovate, and thrive in the ever-evolving landscape of software engineering.</p>
-            </div>
-        </div>
-       
 
-        <section id="about" class="container" style="padding-bottom: 40px; padding-top: 40px;">
-            <div class="row">
-                <div class="col-md-12 about-container animate__animated animate__fadeIn">
-                    <div class="about-left">
-                        <h2>About Me</h2>
-                        I transitioned from Mechanical Engineering to Software Development, embarking on a transformative journey. At Cisco Systems India, I combine technical prowess with creative spark, thriving on solving intricate problems and creating elegant solutions. With attention to detail and curiosity, I bridge technology and user-centric design. My focus is on Front-End technologies—Angular, JavaScript, and TypeScript—to create captivating interfaces."
-                    </div>
-                  
-                </div>
-            </div>
-        </section>
-    
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-        <section id="experience" style="background-color: white; padding-top: 50px; margin-bottom: 30px" >
-            <h2 class="animate__animated animate__fadeIn">Projects</h2>
-            <div class="project animate__animated animate__fadeIn">
-                <div class="project-header">
-                    <img src="https://1000logos.net/wp-content/uploads/2016/11/cisco-emblem.jpg" alt="Cisco Logo" class="logo" style="margin-bottom: 20px;">
-                    <div class="project-info" style="background-color: rgb(0, 195, 255); color: white;">
-                        <h3>WEBUI - Enhancing User Interface for Switches and Routers</h3>
-                        <h5>Cisco · Apprenticeship</h5>
-                        <h5>Dec 2022 - Present · 9 mos · Bengaluru, Karnataka, India</h5>
-                    </div>
-                    
-                </div>
-                <div class="project-description">
-                    <p>As a pivotal member of the "WEBUI" project team at Cisco's IOT Department, I contribute significantly to the successful execution and enhancement of user interfaces for switches and routers. My role encompasses diverse responsibilities across bug resolution, feature development, and Angular migration.</p>
-                    <div class="section-box">
-                        <h4>Bug Resolving:</h4>
-                        <ul class="no-bullets">
-                            <li>Diligently identify and diagnose software bugs, employing analytical prowess to pinpoint optimal solutions.</li>
-                            <li>Employ Git version control to manage and track code changes seamlessly.</li>
-                        </ul>
-                    </div>
-                    <div class="section-box">
-                        <h4>Adding New Features & Feature Development</h4>
-                        <ul class="no-bullets">
-                            <li>Spearhead the development of an optimal user interface for the project's website, leveraging the Angular framework.</li>
-                            <li>Collaborate on the creation of backend functionality for new features, utilizing Node.js and Lua scripting.</li>
-                        </ul>
-                    </div>
-                    <div class="section-box">
-                        <h4>Angular Migration</h4>
-                        <ul class="no-bullets">
-                            <li>Undertake a critical role in code analysis and the migration process from Angular.js to Angular 14.</li>
-                            <li>Leverage an expert understanding of TypeScript and JavaScript to ensure a seamless transition.</li>
-                        </ul>
-                    </div>
-                    <div class="section-box">
-                        <h4>Skills Involved</h4>
-                        <ul class="no-bullets">
-                            <li><strong>Bug Resolving:</strong> Testing, Debugging, Problem Solving, Git</li>
-                            <li><strong>Adding New Features & Feature Development:</strong> Angular, Node.js, Lua Scripting, Networking, IOT Operations</li>
-                            <li><strong>Angular Migration:</strong> TypeScript, JavaScript</li>
-                        </ul>
-                    </div>
-                    
-    
-                    <p>Through meticulous bug resolution, impactful feature additions, and the successful migration of Angular versions, I consistently contribute to the project's success.</p>
-                </div>
-            </div>  
-        </section>
-        
-    
-        <section id="skills" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-top: 30px;">
-            <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-md-3 mt-5 text-center animate__animated animate__fadeIn">
-                    <h1>My Skills</h1>
-                    <div class="btn-group" role="group">
-                        <button class="btn btn-primary skill-button" data-skill="frontEnd">Front-end</button>
-                        <button class="btn btn-primary skill-button" data-skill="backEnd">Back-end</button>
-                        <button class="btn btn-primary skill-button" data-skill="database">Database</button>
-                        <button class="btn btn-primary skill-button" data-skill="tools">Tools</button>
-                        <button class="btn btn-primary skill-button" data-skill="softSkills">Soft Skills</button>
-                        <button class="btn btn-primary skill-button" data-skill="technicalSkills">Technical Skills</button>
-                    </div>
-                    <div class="skill" id="frontEnd">
-                        <h2 class="skill-title">Front-end Skills</h2>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 90%;">HTML (90%)</div>
-                        </div>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 90%;">CSS (90%)</div>
-                        </div>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 75%;">JavaScript (75%)</div>
-                        </div>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 90%;">TypeScript (90%)</div>
-                        </div>
-                    </div>
-                    <div class="skill" id="backEnd">
-                        <h2 class="skill-title">Back-end Skills</h2>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 90%;">Java (90%)</div>
-                        </div>
-                        <div class="progress animate__animated animate__slideInLeft" style="width: 80%;">
-                            <div class="progress-bar" style="width: 70%;">Node.js (70%)</div>
-                        </div>
-                    </div>
-                    <div class="skill" id="database">
-                        <h2 class="skill-title">Database Skills</h2>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%;">SQL (85%)</div>
-                        </div>
-                    </div>
-                    <div class="skill" id="tools">
-                        <h2 class="skill-title">Tools Skills</h2>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 90%;">Angular (90%)</div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 85%;">Git (85%)</div>
-                        </div>
-                    </div>
-                    <div class="skill" id="softSkills">
-                        <h2 class="skill-title">Soft Skills</h2>
-                        <p>Communication, Problem-solving, Teamwork, Continuous learning, Adaptability</p>
-                    </div>
-                    <div class="skill" id="technicalSkills">
-                        <h2 class="skill-title">Technical Skills</h2>
-                        <p>Debugging, Testing, API, Networking, IoT, OOP, JSON, Linux</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div class="text">
+          <div class="text-one">Hello,</div>
+          <div class="text-two">I'm Shubham Ekkaldevi</div>
+          <div class="text-three">Software Developer</div>
+          <div class="text-four">Cisco Systems India</div>
         </div>
-    
-        <script>
-            // Handle skill button clicks
-            const skillButtons = document.querySelectorAll('.skill-button');
-            skillButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const skillId = button.getAttribute('data-skill');
-                    const skillSection = document.getElementById(skillId);
-                    skillButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    skillButtons.forEach(btn => btn.disabled = false);
-                    button.disabled = true;
-                    hideAllSkillSections();
-                    skillSection.style.display = 'block';
-                });
-            });
-    
-            function hideAllSkillSections() {
-                const skillSections = document.querySelectorAll('.skill');
-                skillSections.forEach(section => {
-                    section.style.display = 'none';
-                });
+        <div class="button">
+          <a href="#about"><button>More About Me</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title"><span>About Me</span></div>
+        <div class="about-details">
+          <div class="left">
+            <img src="Shubhi.jpg" alt="My image" />
+          </div>
+          <div class="right">
+            <div class="topic">
+              Experienced Software Developer from Cisco Systems India
+            </div>
+            <p>
+              Passionate Software Developer specializing in front-end
+              development in the Internet of Things (IoT) domain at Cisco. I'm
+              dedicated to crafting seamless digital experiences that bridge
+              technology and user-centric design
+            </p>
+
+            <div class="topic" style="margin-top: 30px">
+              Designing and Coding Is My Passion
+            </div>
+            <p>
+              I love to code because it is usable art. Just like architecture,
+              which is an art used by people daily and affects their everyday
+              life, so is code. As a CSE student, I have an interest in Coding
+              and Web Designing. I am very passionate about designing and
+              Coding. I would not stop until I become a successful software
+              engineer.
+            </p>
+
+            <div class="button"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skill Section Start -->
+    <!-- Section Tag and Other Div will same where we need to put same CSS -->
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title"><span>My Skills</span></div>
+        <div class="skills-details">
+          <style>
+            .skill {
+              margin: 20px;
             }
-        </script>
-    </section>
-    <section id="education" class="animate__animated animate__fadeIn">
-        <h2>Qualification and Courses</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Institute</th>
-                    <th>Course</th>
-                    <th>Score</th>
-                    <th>Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Pune University</td>
-                    <td>B.E Mechanical Engineering</td>
-                    <td>9.3 CGPA</td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td>Qspider's Institute</td>
-                    <td>Software Development and Testing</td>
-                    <td></td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td>NIIT Pune</td>
-                    <td>Advanced Diploma in Web Development</td>
-                    <td></td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td>Government Polytechnic Pune</td>
-                    <td>Diploma in Mechanical Engineering</td>
-                    <td>83 Percent</td>
-                    <td>2019</td>
-                </tr>
-                <tr>
-                    <td>Vidya Niketan</td>
-                    <td>Secondary</td>
-                    <td>93 percent</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>                      
-          <h2>Certifications</h2>
-        <table class="table table-bordered">
-            <tbody>        
-                <tr>             
-                    <td>
-                        <ul>
-                            <li>
-                                <img src="data:image/png;base64,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" alt="Institute 1 Logo"> CCNA Certification Cisco Certified Networking Associate
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Complete Java Full Stack Development (Simplilearn)
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Python Programming (Simplilearn)
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Become a back-end expert (Simplilearn)
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Implement Frameworks the DevOps way (SIMPLILEARN)
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Developing Web Application using Front-end stack
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPll5gTEFFAFz-mu15Yai6ZwNVSdgn8lOmL6ErEtbdw&s" alt="Institute 2 Logo"> NIIT Foundation Course for Web Development
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s" alt="Institute 2 Logo"> Implement OOPS using Java with D.S (SIMPLILEARN)
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LxTQB9jxeyarL2-m9-csCIjMe_aMZTT6ABdxT8XYyQ&ss" alt="Institute 2 Logo"> Software Development and Testing by Qspider's
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <div class="contact-item">
-                <h3>Mobile</h3>
-                <p>+91 9156802283</p>
+            .skill-title {
+              font-size: 24px;
+              margin-bottom: 10px;
+            }
+            .progress {
+              height: 30px;
+              margin-bottom: 10px;
+            }
+            .progress-bar {
+              transition: width 1s;
+            }
+            .project-list {
+              list-style-type: disc; /* Use bullet points */
+              margin-left: 10px; /* Add left margin for indentation */
+              padding-left: 0; /* Remove default padding */
+            }
+            .boxes {
+        margin-top: 20px; /* Adjust the value as needed */
+    }
+          </style>
+
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-md-6 offset-md-1 text-center animate__animated animate__fadeIn"
+              >
+                <div class="btn-group" role="group">
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="frontEnd"
+                  >
+                    Front-end
+                  </button>
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="backEnd"
+                  >
+                    Back-end
+                  </button>
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="database"
+                  >
+                    Database
+                  </button>
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="tools"
+                  >
+                    Tools
+                  </button>
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="softSkills"
+                  >
+                    Soft Skills
+                  </button>
+                  <button
+                    class="btn btn-primary skill-button"
+                    data-skill="technicalSkills"
+                  >
+                    Technical Skills
+                  </button>
+                </div>
+                <div class="skill" id="frontEnd">
+                  <h2 class="skill-title">Front-end Skills</h2>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 90%">
+                      HTML (90%)
+                    </div>
+                  </div>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 90%">CSS (90%)</div>
+                  </div>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 75%">
+                      JavaScript (75%)
+                    </div>
+                  </div>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 90%">
+                      TypeScript (90%)
+                    </div>
+                  </div>
+                </div>
+                <div class="skill" id="backEnd">
+                  <h2 class="skill-title">Back-end Skills</h2>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 90%">
+                      Java (90%)
+                    </div>
+                  </div>
+                  <div
+                    class="progress animate__animated animate__slideInLeft"
+                    style="width: 80%"
+                  >
+                    <div class="progress-bar" style="width: 70%">
+                      Node.js (70%)
+                    </div>
+                  </div>
+                </div>
+                <div class="skill" id="database">
+                  <h2 class="skill-title">Database Skills</h2>
+                  <div
+                  class="progress animate__animated animate__slideInLeft"
+                  style="width: 80%"
+                >
+                    <div class="progress-bar" style="width: 85%">SQL (85%)</div>
+                  </div>
+                </div>
+                <div class="skill" id="tools">
+                  <h2 class="skill-title">Tools Skills</h2>
+                  <div
+                  class="progress animate__animated animate__slideInLeft"
+                  style="width: 80%"
+                >
+                    <div class="progress-bar" style="width: 85%">Angular (85%)</div>
+                  </div>
+                  <div
+                  class="progress animate__animated animate__slideInLeft"
+                  style="width: 80%"
+                >
+                    <div class="progress-bar" style="width: 85%">Angular (85%)</div>
+                  </div>
+                </div>
+                <div class="skill" id="softSkills">
+                  <h2 class="skill-title">Soft Skills</h2>
+                  <p>Communication</p>
+                  <p>  Problem-solving, </p>
+                  <p>Teamwork, </p>
+                  <p>Continuous Learning,</p>              
+                  <p> Adaptability </p>
+                 
+                </div>
+                <div class="skill" id="technicalSkills">
+                  <h2 class="skill-title">Technical Skills</h2>
+                  <p> Debugging,</p>
+                  <p>   Testing,  </p>
+                  <p>Networking, </p>
+                  <p>OOP, </p>
+                  <p>API,  IoT,  JSON, Linux</p>
+            
+                </div>
+              </div>
             </div>
-            <div class="contact-item">
-                <h3>Email</h3>
-                <p>shubhamind722@gmail.com</p>
+          </div>
+          <script>
+            // Handle skill button clicks
+            const skillButtons = document.querySelectorAll(".skill-button");
+            skillButtons.forEach((button) => {
+              button.addEventListener("click", () => {
+                const skillId = button.getAttribute("data-skill");
+                const skillSection = document.getElementById(skillId);
+                skillButtons.forEach((btn) => btn.classList.remove("active"));
+                button.classList.add("active");
+                skillButtons.forEach((btn) => (btn.disabled = false));
+                button.disabled = true;
+                hideAllSkillSections();
+                skillSection.style.display = "block";
+              });
+            });
+
+            function hideAllSkillSections() {
+              const skillSections = document.querySelectorAll(".skill");
+              skillSections.forEach((section) => {
+                section.style.display = "none";
+              });
+            }
+          </script>
+
+          <div class="boxes">
+            <div class="box">
+              <div class="topic">HTML</div>
+              <div class="per">90%</div>
             </div>
-            <div class="contact-item">
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/" target="_blank">Profile</a></p>
+            <div class="box">
+              <div class="topic">CSS</div>
+              <div class="per">80%</div>
             </div>
+            <div class="box">
+              <div class="topic">JavScript</div>
+              <div class="per">75%</div>
+            </div>
+            <div class="box">
+              <div class="topic">JAVA</div>
+              <div class="per">85%</div>
+            </div>
+            <div class="box">
+              <div class="topic">SQL</div>
+              <div class="per">80%</div>
+            </div>
+            <div class="box">
+              <div class="topic">TypeScript</div>
+              <div class="per">75%</div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
+
+    <!-- My Services Section Start -->
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title"><span>My Services</span></div>
+        <div class="boxes">
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div class="topic">Web Devlopment</div>
+            <p>
+              Having experiencein wed designing as well as in web development.
+              I'm really excited to start the new experience in corporate world
+              with my skills.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="topic">Photography</div>
+            <p>
+              Photography is the art of capturing light with a camera, usually
+              via a digital sensor or film, to create an image. It's the way to
+              process the moments ito memory.
+            </p>
+          </div>
+          <div class="box">
+            <div class="icon">
+              <i class="fas fa-less-than-equal"></i>
+            </div>
+            <div class="topic">Automtion Testing</div>
+            <p>
+              Automation testing is the process of testing software and other
+              tech products to ensure it meets strict requirements. Very curious
+              aout developmentand testing as well.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me section Start -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title"><span>Contact Me</span></div>
+        <div class="text">
+          <div class="topic">
+            Have Any Project?<br />
+            Connect with me.
+          </div>
+        </div>
+        <div class="media-icons">
+          <center>
+            <a href="https://www.facebook.com/aniket.kumbhar.10888"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/mr.ak_2_4_99"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/aniket-kumbhar-164538236"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </center>
+        </div>
+        <div class="contact-1" id="contact-1">
+          <h3>
+            Phone: <span>7218997071</span><br />
+            Email: <span>kumbharaniket2499@gmail.com</span><br />
+            Location:<span>Kolhapur</span>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section Start -->
     <footer>
-        <p>&copy; 2023 Shubham Ekkaldevi</p>
+      <div class="text">
+        <span>Created By Aniket-K | &#169; 2022 All Rights Reserved</span>
+      </div>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
