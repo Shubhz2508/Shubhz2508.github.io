@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/React-website/static/css/main.02a5ed09.css",
+    "main.js": "/React-website/static/js/main.d4c3fd49.js",
+    "static/js/787.091bb736.chunk.js": "/React-website/static/js/787.091bb736.chunk.js",
+    "static/media/masala.jpg": "/React-website/static/media/masala.f4dd64f4906d42ddcbdb.jpg",
+    "static/media/banner.jpeg": "/React-website/static/media/banner.05892fe97cce26a5d9e5.jpeg",
+    "static/media/chhola.jpg": "/React-website/static/media/chhola.a1458ef1370699c23212.jpg",
+    "static/media/logo.svg": "/React-website/static/media/logo.6fc22e5fbdec6b9338921613bddec0dd.svg",
+    "static/media/paneer.jpg": "/React-website/static/media/paneer.f04d2c563fe596463e47.jpg",
+    "static/media/idli.jpg": "/React-website/static/media/idli.dc2d98fda6c7a903c64b.jpg",
+    "static/media/gujrati.jpeg": "/React-website/static/media/gujrati.77bd2d3baa11e6cf3dcd.jpeg",
+    "static/media/dosa.jpg": "/React-website/static/media/dosa.5c938f456ea86779ba13.jpg",
+    "index.html": "/React-website/index.html",
+    "main.02a5ed09.css.map": "/React-website/static/css/main.02a5ed09.css.map",
+    "main.d4c3fd49.js.map": "/React-website/static/js/main.d4c3fd49.js.map",
+    "787.091bb736.chunk.js.map": "/React-website/static/js/787.091bb736.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02a5ed09.css",
+    "static/js/main.d4c3fd49.js"
+  ]
+}
