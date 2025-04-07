@@ -1,0 +1,770 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #6e93f7;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4070f4;
+}
+/* navbar styling */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+}
+nav.sticky {
+  background: #4070f4;
+  padding: 13px 0;
+}
+nav .navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a {
+  font-weight: 500;
+  font-size: 35px;
+  color: #4070f4;
+}
+nav.sticky .navbar .logo a {
+  color: #fff;
+}
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li {
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: lightblue;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover {
+  color: #4070f4;
+}
+nav.sticky .menu a {
+  color: #fff;
+}
+nav.sticky .menu a:hover {
+  color: #0e2431;
+}
+.navbar .media-icons a {
+  color: #000000;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a {
+  color: #fff;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn {
+  color: #4070f4;
+}
+nav.sticky .menu-btn {
+  color: #fff;
+}
+.navbar .menu .menu-btn {
+  color: #fff;
+}
+
+/* home section styling */
+.home {
+  height: 100vh;
+  max-width: 100%;
+  background-color: rgb(101, 109, 109);
+  /*background: url("images/background.jpg") no-repeat;*/
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Ubuntu", sans-serif;
+  background: url("../assets/backg3.jpg") center/cover no-repeat;
+  padding: 20px;
+  opacity: 0.7; /* Adjust the opacity as needed (0.0 to 1.0) */
+}
+.home .home-content {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .text-one {
+  font-size: 25px;
+  color: white;
+}
+.home .text-two {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .text-three {
+  font-size: 40px;
+  margin: 5px 0;
+  color: #ffffff;
+}
+.home .text-four {
+  font-size: 23px;
+  margin: 5px 0;
+  color: white;
+}
+.home .button {
+  margin: 14px 0;
+}
+.home .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section {
+  padding-top: 40px;
+}
+section .content {
+  width: 80%;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Add table wrapper for overflow handling */
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span {
+  color: #0e2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4070f4;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left {
+  width: 45%;
+}
+.about .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right {
+  width: 55%;
+}
+section .topic {
+  color: #0e2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p {
+  text-align: justify;
+  color: #0e2431;
+}
+section .button {
+  margin: 16px 0;
+}
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #4070f4;
+  color: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover {
+  border-color: #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+
+/* My Skills CSS */
+.skills {
+  background: #f0f8ff;
+}
+.skills .content {
+  padding: 40px 0;
+}
+.skills .skills-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills-details .text {
+  width: 50%;
+}
+.skills-details p {
+  color: #0e2431;
+  text-align: justify;
+}
+.skills .skills-details .experience {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num {
+  color: #0e2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp {
+  color: #0e2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box {
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic {
+  font-size: 20px;
+  color: #4070f4;
+}
+.skills-details .boxes .per {
+  font-size: 60px;
+  color: #4070f4;
+}
+
+/* My Services CSS */
+.services .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box {
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover {
+  background: #4070f4;
+  color: #fff;
+}
+.services .boxes .box .icon {
+  height: 50px;
+  width: 50px;
+  background: #4070f4;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon {
+  background-color: #fff;
+  color: #4070f4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #0e2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p {
+  color: #fff;
+}
+/* Contact Me CSS */
+.contact {
+  background: #f0f8ff;
+}
+.contact .content {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.contact .media-icons a {
+  color: #000000;
+  font-size: 40px;
+  margin: 0 50px;
+}
+
+.contact-1 {
+  color: #000000;
+  font-size: xx-small;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+#contact-1 {
+  margin-top: 3%;
+  box-shadow: 0px 0px 10px #000000;
+  border-radius: 10px;
+  align-items: center;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.contact-1 span {
+  color: #4070f4;
+}
+/* Footer CSS */
+footer {
+  background: #4070f4;
+  padding: 15px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+footer .text span {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a {
+  font-weight: 500;
+  color: #fff;
+}
+footer .text span a:hover {
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #4070f4;
+  padding: 7px 12px;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  z-index: 9;
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right {
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar {
+    width: 90%;
+  }
+  nav .navbar .menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0e2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu {
+    left: 0;
+  }
+  nav .navbar .menu a {
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover {
+    color: #4070f4;
+  }
+  nav .navbar .media-icons {
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn {
+    display: block;
+  }
+  .home .text-two {
+    font-size: 65px;
+  }
+  .home .text-three {
+    font-size: 35px;
+  }
+  .skills .skills-details {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home .text-two {
+    font-size: 55px;
+  }
+  .home .text-three {
+    font-size: 33px;
+  }
+  .skills-details .boxes .per {
+    font-size: 50px;
+    color: #4070f4;
+  }
+}
+
+.skill {
+  margin: 20px;
+}
+.skill-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.progress {
+  height: 30px;
+  margin-bottom: 10px;
+}
+.progress-bar {
+  transition: width 1s;
+}
+
+.project-list {
+  list-style-type: disc; /* Use bullet points */
+  margin-left: 10px; /* Add left margin for indentation */
+  padding-left: 0; /* Remove default padding */
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.logo {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.project-info h3 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #6cb0f4;
+}
+h2 {
+  margin-top: 20px;
+}
+.line-after li:not(:last-child)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+
+.logo-cell {
+  text-align: center;
+}
+
+.logo-cell img {
+  max-width: 100px; /* Adjust the image width as needed */
+}
+
+li img {
+  max-width: 50px; /* Adjust the image width as needed */
+  margin-right: 10px; /* Add spacing between image and text */
+}
+.project-list {
+  list-style-type: disc; /* Use bullet points */
+  margin-left: 10px; /* Add left margin for indentation */
+  padding-left: 0; /* Remove default padding */
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.logo {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.project-info h3 {
+  margin: 0;
+}
+.project-subtitle {
+  color: black; /* Set color to black */
+  font-weight: bold; /* Add bold font weight if desired */
+  display: block; /* Ensure each line is on a new line */
+}
+
+.project-duration {
+  color: black; /* Set color to black */
+  display: block; /* Ensure each line is on a new line */
+}
+.project-description p {
+  color: black;
+}
+.custom-animation {
+  animation-duration: 1s; /* You can adjust the duration in seconds */
+}
+
+.custom-animation2 {
+  animation-duration: 2s; /* You can adjust the duration in seconds */
+  animation-delay: 2s;
+}
+.custom-animation3 {
+  animation-duration: 2s; /* You can adjust the duration in seconds */
+  animation-delay: 3s;
+}
+
+/* Horizontal Scroll Styles for Experience Section */
+#experience-container {
+  height: 100vh;
+  width: 400%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.horizontal-section {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.horizontal-section:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/backg3.jpg");
+}
+
+.horizontal-section:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/Shubhi.jpg");
+}
+
+.horizontal-section:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/Roadmap3.png");
+}
+
+.horizontal-section:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/backg3.jpg");
+}
+
+.section-content {
+  color: white;
+  text-align: center;
+  max-width: 80%;
+  padding: 30px;
+  background-color: rgba(64, 112, 244, 0.8);
+  border-radius: 10px;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.section-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.section-content p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills-list li {
+  background-color: white;
+  color: #4070f4;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .section-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-content h3 {
+    font-size: 1.4rem;
+  }
+}

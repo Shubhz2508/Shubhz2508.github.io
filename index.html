@@ -4,18 +4,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <!-- Fontawesome CDN Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GSAP and ScrollTrigger for horizontal scrolling -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <!-- Move to up button -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <div class="scroll-button">
       <a href="#home"><i class="fas fa-arrow-up"></i></a>
@@ -36,7 +41,9 @@
           </div>
         </ul>
         <div class="media-icons">
-          <a href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/"
+          <a
+            href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/"
+            rel="noopener noreferrer"
             ><i class="fab fa-linkedin"></i
           ></a>
         </div>
@@ -50,10 +57,27 @@
     <section class="home" id="home">
       <div class="home-content">
         <div class="text">
-          <div class="text-one animate__animated animate__slideInRight custom-animation">Hello,</div>
-          <div class="text-two animate__animated animate__slideInLeft rainbowText" style="animation-delay: 1s;">I'm Shubham Ekkaldevi</div>
-          <div class="text-three animate__animated animate__slideInLeft custom-animation2">A Software Developer</div>
-          <div class="text-four  animate__animated animate__slideInLeft custom-animation3">from Cisco Systems India</div>
+          <div
+            class="text-one animate__animated animate__slideInRight custom-animation"
+          >
+            Hello,
+          </div>
+          <div
+            class="text-two animate__animated animate__slideInLeft rainbowText"
+            style="animation-delay: 1s"
+          >
+            I'm Shubham Ekkaldevi
+          </div>
+          <div
+            class="text-three animate__animated animate__slideInLeft custom-animation2"
+          >
+            A Software Developer
+          </div>
+          <div
+            class="text-four animate__animated animate__slideInLeft custom-animation3"
+          >
+            from Cisco Systems India
+          </div>
         </div>
         <div class="button">
           <a href="#about"><button>More About Me</button></a>
@@ -67,7 +91,7 @@
         <div class="title"><span>About Me</span></div>
         <div class="about-details">
           <div class="left">
-            <img src="Shubhi.jpg" alt="My image" />
+            <img src="./assets/Shubhi.jpg" alt="My image" />
           </div>
           <div class="right">
             <div class="topic">
@@ -84,7 +108,13 @@
               Designing and Coding Is My Passion
             </div>
             <p>
-              Designing and coding aren't just things I do; they're part of who I am. I genuinely enjoy creating digital solutions that work well and look good. Solving problems in this field is like a puzzle I can't get enough of, and I'm always learning something new. But what I love most is the satisfaction of taking an idea and turning it into something practical and user-friendly. That's what being a digital engineer me
+              Designing and coding aren't just things I do; they're part of who
+              I am. I genuinely enjoy creating digital solutions that work well
+              and look good. Solving problems in this field is like a puzzle I
+              can't get enough of, and I'm always learning something new. But
+              what I love most is the satisfaction of taking an idea and turning
+              it into something practical and user-friendly. That's what being a
+              digital engineer me
             </p>
 
             <div class="button"></div>
@@ -93,253 +123,247 @@
       </div>
     </section>
 
-    <section class="experience" id="experience">
-      <div class="content">
-        <div class="title"><span>Experience / Project</span></div>
-
-        <div class="project animate__animated animate__fadeIn">
-          <div class="project-header">
-            <img
-              src="https://1000logos.net/wp-content/uploads/2016/11/cisco-emblem.jpg"
-              alt="Cisco Logo"
-              class="logo"
-              style="margin-bottom: 20px"
-            />
-            <div
-              class="project-info"
-              style="background-color: rgb(0, 195, 255); color: white"
-            >
-              <h3>WEBUI - Enhancing User Interface for Switches and Routers</h3>
-              <h5>Cisco · Apprenticeship</h5>
-              <h5>Dec 2022 - Present  · Bengaluru, Karnataka, India</h5>
-            </div>
-          </div>
-          <div class="project-description">
+    <section class="experience overflow-hidden" id="experience">
+      <main id="experience-container">
+        <section class="horizontal-section">
+          <div class="section-content">
+            <h2>Professional Experience</h2>
+            <h3>WEBUI - Enhancing User Interface for Switches and Routers</h3>
+            <p>Cisco · Apprenticeship · Dec 2022 - Present</p>
             <p>
               As a pivotal member of the "WEBUI" project team at Cisco's IOT
               Department, I contribute significantly to the successful execution
-              and enhancement of user interfaces for switches and routers. My
-              role encompasses diverse responsibilities across bug resolution,
-              feature development, and Angular migration.
-            </p>
-            <div class="section-box">
-              <h4>Bug Resolving:</h4>
-              <ul class="no-bullets">
-                <li>
-                  Diligently identify and diagnose software bugs, employing
-                  analytical prowess to pinpoint optimal solutions.
-                </li>
-                <li>
-                  Employ Git version control to manage and track code changes
-                  seamlessly.
-                </li>
-              </ul>
-            </div>
-            <div class="section-box">
-              <h4>Adding New Features & Feature Development</h4>
-              <ul class="no-bullets">
-                <li>
-                  Spearhead the development of an optimal user interface for the
-                  project's website, leveraging the Angular framework.
-                </li>
-                <li>
-                  Collaborate on the creation of backend functionality for new
-                  features, utilizing Node.js and Lua scripting.
-                </li>
-              </ul>
-            </div>
-            <div class="section-box">
-              <h4>Angular Migration</h4>
-              <ul class="no-bullets">
-                <li>
-                  Undertake a critical role in code analysis and the migration
-                  process from Angular.js to Angular 14.
-                </li>
-                <li>
-                  Leverage an expert understanding of TypeScript and JavaScript
-                  to ensure a seamless transition.
-                </li>
-              </ul>
-            </div>
-            <div class="section-box">
-              <h4>Skills Involved</h4>
-              <ul class="no-bullets">
-                <li>
-                  <strong>Bug Resolving:</strong> Testing, Debugging, Problem
-                  Solving, Git
-                </li>
-                <li>
-                  <strong>Adding New Features & Feature Development:</strong>
-                  Angular, Node.js, Lua Scripting, Networking, IOT Operations
-                </li>
-                <li>
-                  <strong>Angular Migration:</strong> TypeScript, JavaScript
-                </li>
-              </ul>
-            </div>
-
-            <p>
-              Through meticulous bug resolution, impactful feature additions,
-              and the successful migration of Angular versions, I consistently
-              contribute to the project's success.
+              and enhancement of user interfaces for switches and routers.
             </p>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section class="horizontal-section">
+          <div class="section-content">
+            <h2>Development Skills</h2>
+            <h3>Frontend & Backend Expertise</h3>
+            <p>
+              My technical skills span both frontend and backend development,
+              enabling me to deliver complete solutions.
+            </p>
+            <ul class="skills-list">
+              <li>Angular</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Git</li>
+              <li>UI/UX Design</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="horizontal-section">
+          <div class="section-content">
+            <h2>Key Projects</h2>
+            <h3>Feature Development & Bug Resolution</h3>
+            <p>
+              I have successfully led and contributed to various features and
+              improvements:
+            </p>
+            <ul class="skills-list">
+              <li>UI Migration</li>
+              <li>Performance Optimization</li>
+              <li>Responsive Design</li>
+              <li>API Integration</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="horizontal-section">
+          <div class="section-content">
+            <h2>Technical Leadership</h2>
+            <h3>Angular Migration & Team Collaboration</h3>
+            <p>
+              Successfully migrated legacy Angular.js code to Angular 14,
+              improving performance and maintainability while ensuring seamless
+              user experience.
+            </p>
+            <p>
+              I collaborate with cross-functional teams to deliver high-quality
+              digital solutions for complex networking hardware.
+            </p>
+          </div>
+        </section>
+      </main>
     </section>
 
     <section id="education" class="animate__animated animate__fadeIn">
       <div class="content">
         <div class="title"><span>Qualification and Courses</span></div>
 
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Institute</th>
-              <th>Course</th>
-              <th>Score</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Qspider's Institute</td>
-              <td>Software Development and Testing</td>
-              <td></td>
-              <td>2023</td>
-            </tr>
-            <tr>
-              <td>NIIT Pune</td>
-              <td>Advanced Diploma in Web Development</td>
-              <td></td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>Pune University</td>
-              <td>B.E Mechanical Engineering</td>
-              <td>9.3 CGPA</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>Government Polytechnic Pune</td>
-              <td>Diploma in Mechanical Engineering</td>
-              <td>83 Percent</td>
-              <td>2019</td>
-            </tr>
-            <tr>
-              <td>Vidya Niketan</td>
-              <td>Secondary</td>
-              <td>93 percent</td>
-              <td>2016</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Institute</th>
+                <th>Course</th>
+                <th>Score</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Qspider's Institute</td>
+                <td>Software Development and Testing</td>
+                <td></td>
+                <td>2023</td>
+              </tr>
+              <tr>
+                <td>NIIT Pune</td>
+                <td>Advanced Diploma in Web Development</td>
+                <td></td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td>Pune University</td>
+                <td>B.E Mechanical Engineering</td>
+                <td>9.3 CGPA</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td>Government Polytechnic Pune</td>
+                <td>Diploma in Mechanical Engineering</td>
+                <td>83 Percent</td>
+                <td>2019</td>
+              </tr>
+              <tr>
+                <td>Vidya Niketan</td>
+                <td>Secondary</td>
+                <td>93 percent</td>
+                <td>2016</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <div class="container text-center" class="animate__animated animate__slideIn">
+        <div
+          class="roadmap-div container text-center overflow-hidden w-100"
+          class="animate__animated animate__slideIn"
+        >
           <img
-            src="Roadmap3.png"
+            class="w-100 h-100 object-fit-cover"
+            src="./assets/Roadmap3.png"
             alt="RoadMap of education"
-            
           />
         </div>
 
-       <div class="title mt-4"><span>Certification</span></div>
+        <div class="title mt-4"><span>Certification</span></div>
 
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <td>
-                <ul>
-                  <li>
-                    <img
-                      src="data:image/png;base64,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"
-                      alt="Institute 1 Logo"
-                    />
-                    <a href="https://drive.google.com/file/d/1RXmrb7J97HZv9gBl2T8iIzYWahmYZUM9/view?usp=sharing" title="CCNA">CCNA Certification Cisco Certified Networking Associate</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                    <a href="https://drive.google.com/file/d/1jCW1IzbsaAAn4us6O1-XKXeABJnNBcsV/view?usp=sharing" title="Java">Complete Java Full Stack Development (Simplilearn)</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                    Python Programming (Simplilearn)
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                    Become a back-end expert (Simplilearn)
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                    Implement Frameworks the DevOps way (SIMPLILEARN)
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                    Developing Web Application using Front-end stack
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPll5gTEFFAFz-mu15Yai6ZwNVSdgn8lOmL6ErEtbdw&s"
-                      alt="Institute 2 Logo"
-                    />
-                    NIIT Foundation Course for Web Development
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
-                      alt="Institute 2 Logo"
-                    />
-                     <a href="https://drive.google.com/file/d/1fG4GVARpe5wU_S6cdl9JRu1aq09kK65_/view?usp=sharing" title="Java">Implement OOPS using Java with D.S (SIMPLILEARN)</a>
-                  </li>
-                </ul>
-                <ul>
-                  <li>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LxTQB9jxeyarL2-m9-csCIjMe_aMZTT6ABdxT8XYyQ&ss"
-                      alt="Institute 2 Logo"
-                    />
-                    Software Development and Testing by Qspider's
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANsAAAB9CAMAAAAcGOaBAAAAkFBMVEUEn9j///////4AndcAmtaPx+hsuOH4/vyWyen8//15u+UAmNX///wAltXt+PrE4fG53/FErd02qt2d0eub0e+y3Ozg7/h2wOXM5/WAwuUgpNo7ptrX7PS84vB9wegAlNem1erc8fRRs95hteNdtdqIyORuv96FyN+Z0+fD3/hIquI+rtcxo95Urd+w1+51xN3Qlw/RAAAL50lEQVR4nO1cCZejOA7GlhOK9ZEQKkAcqsjZ09OTzv7/f7e2wdzkoEL3zCx6r6uqQcj+LCNLsozjTDTRRBNNNNFE/ycEDqeEq1/jSFfiiRKv//j1BHKXJDtCRkJHSBAna4ePIvxe2wePKRI+HwUbWQktHh3oGNJvE8iQIYQxjscR73wgD2GEQzmK/JtEIhcZEscx9Aa+yMS70a9XHJkxzzSOP8kI4mGeDx17G0P8bSIzD2PT+n9G0dvczcT/JmxoXGzMiMdvv2NOTtgG0oRtJJqwDaYJ20g0YRtMvwwbJYQ0AdzABpr/iciHUkKbUdotbCquU+wvGVFIT7vdxmm4Pv3YKJx3waHV216ih93uLBvi+7ERZ7ML5vRFk2XnMuYlq3rrvdjgkChPUwSPuYFq/L8LrMQf6/y92GCVIIbddWsiDSAggcaAWVgX1oeNSKGdXIY2j4EjkeJVFK5qYvqwER5iHTei3SsUR0xfVRR6qHW2BxuQjWFXAflj2HhooDFcH4tebIesVSbkC8CtUE5BvZE+bNeMG+OHGgfI4jSGlrXMSC+2d9sd/+vYIMeGH8RGlzjnfwybg57CRt9td/zhmIpGnsPm8GHY0D8C2xqNiY284wnbIzRhK+lvi43zVn7/ZdgAgHPaEv86bEB5X4qbONxffwSycf91eqP+TolP637my7ARIoOPq9/jxpIdUysu+jYSNjhj/cAfZBxszpxp8Wvocof4JnPURN1rfRU2cvSMeDSvi38RNvgpmLn8rWvjBxJs3B8c1NT6MmxrlOXY13Xxr8IW4Ex80hHYwSq0jdQnzWuwgYxZdiOWo2Bb5uLDbQe2bZj39aOB+VXYcvYJ24RtwjZh++dj61wDHswplNjw3wjbKsR5I7XVT2HDT2ADfs2usobenJjdwvbVnALk4T4KO8IP8Iu1u47NzyB8MV+i1252Axv+Yi5I6S1rd7/qwCaTvK/X+k1phf3x0JykQaYH7DWcn4/c51rUL9Msz+Wh7zXxvdg2dso38pk7nA1dl8/l0KsZWOZ91h0+EpunMLvU2Pv05hyzRtif9XwwecvE41k9CiFX4wgyVi9T6cEGIPPLcSMVHLlGPNp1FkmRvfHT1/XMv6QHoYMT9v5YzhxgZ8SIH43xIwtzPW6MK6yEvs4as6U3Z04CrbR2xY5SnBa/794DAbkWrji3d2z8DxftvzWCvv79APi2d72139qZge9K/K4t/rJ2VbNNyP17HdEeefFfzTANiBF/6Ym8eUol5e36KUjBIenD+zgO4RJ4e9eMpiB5x4xR4lWz5FFsmfi2HOBEienCpW/qse3Z1tI3HtRbzv6UeA3sYWytrlQ72XnjWfq37Jt20b8bW75Y4s+xsGUL5duvr3yFo8gaFz9HweaLbK1357++Dg/gg5ms2XKkBq5myrNxymrvEMhQraEsGakQXAcODLH96hUb28+3TqLlR0TGqnEnfH5dbBTGccTfIaCUv6oWoks8oelvUdpEE0000UQTTTTRROOQ8YqzzEnFQb6RpMgeMH+ArpLoY8t5HOV393jexMhQN6XTLC5+ASnHGJzL5QLAG4XZhFNDbb/W8DqXH1Jqt7oXGqSKSyomQprpLtuEru/WLA6hL/bOQbnkq8/rMla0WF5nfrWIA06bT0NRMxpRyE7v6qEkiRd/BjO/rWB9gXC5ueZc17dDC5xWFyXH4LqIkzheXjcrPQCvAggETomLSnLDSqBPF/lVUd8dUvjPovoUClvZB9VtMo9FyYJdcapHhCAB5HtVkJvM9dXXQHM+94hVO4m9SnExWWQFxC1s85DlJxst+GNzWhIS6arxkosxFDUKh7gMXMRKFhXrszB6TWDH5RIx9jS2NHIxYw1sjXIn4ny4CNeYMIpqBWWEnhKd/6/yqN646z6r8wyRvwRqEkZ3sZGT23pMHOuvCTmGuMWEIlqzwW8ea/PoMvYtfDVxSfQuzvPYiExs+lJvu2Dzs4GN6hKsdser2Ag5I9yBX80cJA5ftChkte+SfBcb3+SzyLV9U1DFodoZsgpRV7dLbODQDUadTJqSjp3tZ4gmXTPiAb2F9jnmhovrdbkIhVvTm9Jsd6creiMHt6v5vBMs7vUG7pMat3NhRPS8EmoJSkJ16a4t4UUPkhNwnQ8jcj7bVoSTNwvN/HbV2hXvtZgKNrovtKZ/hUlotjnzyc7Qf4en04GuRDFuGCeRv5VEbg9vIb6DDX7Yx1w/76qyilW7DeAWasNMib6AlJfDOUGbwkTQjeXwXOYGx+1q9WO+KNcM3FWT8DC4XTnbxZwrB0qfPCMkPVWseRc2erS9Ej1DS4N8712pQZxSSo2/SSA9+nbYQNrKCQXuSjjoU3U0PSSFAWIPHtbqgra1pQuI7bdmOI1bpeZqRWYXNnIoOtV9Ug2c0GLD4ZGaKzITXgqJPNs6npVvqi6oyG+weLDi4Fi8EvhAm6fvbmGDonCDiYi0vWjJ7acgMBN95/TILn/ZPbSrOtogCwvDDkMVR3fWZcDfudPn5XTbEq/0NsJgLrWiq8/zK7Z6C5SZ6ZILF7uy4n29xJl+swpF39OB2Lhdf5Hw+32ATmzpR7ksM+wm10OtFkCSj8KO9E0r2Ba6f2uwbIuVKR5qKXnhkiw6K9N7sYF2Z6orE1OL0aE69dQ7k1PSd16B23eWtXxsWw+nBn2o3mjmyunClhvD0+NPBnU/GSOvUlqii/5y6q7jcaorwL6pWrLx7L2BHjOAXbhZcMMt7YkD4NqIixjeOVZMWRiH3vtE06IqLWkCIPNC7ECXEpzslVWhSvC03lTcFdRdQaXHq1VA8TUgha1vtvOZHZWkVQM0t3rDQ91lWrgO1xuntftiU4cfFx7CFeVV6tEqc7JPb+TTsrTcj3K6ukM/oMXdXG9ocWN4erEp+3NceyU07bbZV/9S2pK+3A61tgTraKbesasddDcdqLi0MLUt6Y9g02+scpGWwn40CTHvkBtcWBbK7FkDwNnmU9rD77UvGID2l3KKh2LLyzz10PXOnJvYdEdIupqJ3GYyNsu1xK9WMlp3v8sA0i4jOKwnEGBTRCfnoWEOmZcBTt/BsnvYDLy/8rJgjPJ1QKZREam4cyplIZwUuVwAW9WtCz6L9YMAAZGXn3roOAyZYz5dYGeOqH2XrvoG38VmJje2liPDBk65totj1Vssv6CRl7IaeO+QuenKmSTbfTHiw31lhxcxjofFhlIzNXQm9FR5/zp9ZTB5dZCZc5/G9t23K7VaIawFxVhElOSpeErnxSCCtCAQ9tYXbpLmNI3Cwsv9Sozj+PXYdKUnhOMHiXs3zyUJNUlbFfBxmpfhKzSztJDtVha/cCMvipf7sz3eFIaTn0vfhrm7gxomGcWl5f1KbAqSn1EhSrezT5LQU130Pu/E3Sux28x/ap3J1TFw7bvv+uV7cy5XPnWbiSRJXD0GlZxCWsSP2oFAntCfragsmNEXSvQA+L50Ljx7UKD+AY9ubCYJpHMgcSJM503/9rwYaYCkzBYzZA9MNHNBlcSDSZWwijMQfy1BSfw9aifR7ua5yoMuNWKV7y1KshKdqcdqfpJG7QxuQUlf3fVjBCrSEK/Cpj/DWUsZ+6Ir+VjF5ujcK/LaHVBXkh9f3ojTPWAN4YOwuVjUjmKAnhQd6ccaNiBnhcNrsOjXIvS/vt2hLPO6OTEGYWNhI+OiTBVZNrvdwKZD1KQ5tPpdvkLriP8QcIRGsU3qq5VGD1o190oX2GPMa2Bj+R6A+Ye1HQycZqklSCDRwpgIs1Oj/E7F2Sx/JjIQ2oaYnKvnZYdD5tBdqD8AnZzHyvQzk/U0+1+VvUUS59G5W8lPXvRQZE8w/cvdbTvTEkDh9FFw6RxLfdPANEC3M73hY3g0wsXpdV8mBn3kgx+ChVqClFnfRTKtvhKrnwdNfvVAGiGrKDAbveqJ5XmVdhwXyR8nnB/fM9ELI7qlD32qRG7WsWEJjtCzKT4YnN6XNudQ1M96Pg60+6GzzaRqBLVrpvf31X90cazs9SCMb2Y2+jVK2lfCCzzVwmjKX7Gp2NnC02If7skjfOOAmmiiiSaaaKJ/FP0PyPbE4XhFw6gAAAAASUVORK5CYII="
+                        alt="Institute 1 Logo"
+                      />
+                      <a
+                        href="https://drive.google.com/file/d/1RXmrb7J97HZv9gBl2T8iIzYWahmYZUM9/view?usp=sharing"
+                        title="CCNA"
+                        >CCNA Certification Cisco Certified Networking
+                        Associate</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      <a
+                        href="https://drive.google.com/file/d/1jCW1IzbsaAAn4us6O1-XKXeABJnNBcsV/view?usp=sharing"
+                        title="Java"
+                        >Complete Java Full Stack Development (Simplilearn)</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      Python Programming (Simplilearn)
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      Become a back-end expert (Simplilearn)
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      Implement Frameworks the DevOps way (SIMPLILEARN)
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      Developing Web Application using Front-end stack
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPll5gTEFFAFz-mu15Yai6ZwNVSdgn8lOmL6ErEtbdw&s"
+                        alt="Institute 2 Logo"
+                      />
+                      NIIT Foundation Course for Web Development
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKN0D3LytgP2BezaOwmiXi2K1j2g5JZuAxYOXFh5e6g&s"
+                        alt="Institute 2 Logo"
+                      />
+                      <a
+                        href="https://drive.google.com/file/d/1fG4GVARpe5wU_S6cdl9JRu1aq09kK65_/view?usp=sharing"
+                        title="Java"
+                        >Implement OOPS using Java with D.S (SIMPLILEARN)</a
+                      >
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LxTQB9jxeyarL2-m9-csCIjMe_aMZTT6ABdxT8XYyQ&ss"
+                        alt="Institute 2 Logo"
+                      />
+                      Software Development and Testing by Qspider's
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
     <!-- My Skill Section Start -->
     <!-- Section Tag and Other Div will same where we need to put same CSS -->
-    <section class="skills" id="skills">
+    <section class="skills overflow-hidden" id="skills">
       <div class="content">
         <div class="title"><span>My Skills</span></div>
         <div class="skills-details">
@@ -383,7 +407,10 @@
                 class="col-md-6 offset-md-1 text-center animate__animated animate__fadeIn"
               >
                 <p>Click on any skill to get specific details</p>
-                <div class="btn-group" role="group">
+                <div
+                  class="btn-group w-100 overflow-hidden d-flex flex-wrap"
+                  role="group"
+                >
                   <button
                     class="btn btn-primary skill-button"
                     data-skill="frontEnd"
@@ -496,9 +523,7 @@
                     class="progress animate__animated animate__slideInLeft"
                     style="width: 80%"
                   >
-                    <div class="progress-bar" style="width: 85%">
-                      GIT (85%)
-                    </div>
+                    <div class="progress-bar" style="width: 85%">GIT (85%)</div>
                   </div>
                 </div>
                 <div class="skill" id="softSkills">
@@ -602,6 +627,7 @@
               <a
                 href="https://www.linkedin.com/in/shubham-ekkaldevi-165464197/"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Profile</a
               >
             </p>
@@ -619,6 +645,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
